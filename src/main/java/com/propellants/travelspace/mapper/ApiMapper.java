@@ -24,7 +24,7 @@ public class ApiMapper extends ConfigurableMapper {
 
     @Override
     protected void configure(MapperFactory factory) {
-	factory.classMap(Propellant.class, PropellantDTO.class).mapNulls(false).mapNullsInReverse(false).byDefault()
+	factory.classMap(Propellant.class, PropellantDTO.class).mapNulls(true).mapNullsInReverse(true).byDefault()
 		.register();
 	this.propellantMapper = super.dedicatedMapperFor(Propellant.class, PropellantDTO.class);
     }
